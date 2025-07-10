@@ -7,7 +7,7 @@
 body {
     max-width: 100vw;
     overflow-x: hidden ;
-    background-color: #1e074e;
+    background-color: rgba(41, 25, 74, 0.86);
 }
 
 .container {
@@ -19,9 +19,8 @@ body {
 .navbar__flex{
     width: 100%;
     
-    padding: 40px 15px;
-    padding-bottom: 0px;
-    background-color: grey;
+    padding: 40px 20px;
+    padding-bottom: 20px;
     position: relative;
     display: flex;
     align-items: center;
@@ -44,7 +43,7 @@ body {
     bottom: 0;
     right: 0;
     z-index: 1;
-    height: 300px;
+    height: 280px;
    
 }
 
@@ -59,14 +58,21 @@ body {
     pointer-events: none
 }
 
+.movie_sction{
+    position: relative;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
 .moviePic{
-    background-color: rgba(41, 25, 74, 0.86);
+    background-color: rgba(56, 25, 136, 0.86);
     width: 80%;
     mix-blend-mode:luminosity;
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
-    height: 60vh;
+    height: 50vh;
     
 }
 
@@ -145,6 +151,7 @@ a  {
 .hide{
     display: none;
 }
+
 
 p {
     font-size: 14px;
@@ -230,6 +237,7 @@ input {
 
 .filter{
     margin:0 auto;
+    padding-bottom: 20px;
     width: 100%;
     max-width: 1200px;
     display: flex;
@@ -354,3 +362,95 @@ input {
 }
   
 
+*/
+
+.movie__body {
+  background-color: rgba(115, 66, 214, 0.1);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie__main {
+  flex: 1;
+  background-color: rgb(248,249,250);
+}
+
+
+.container__movie--selected {
+  padding-top: 16px;
+}
+
+.movie__selected {
+  display: flex;
+}
+
+.movie__selected--figure {
+  width: 40%;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie_selected--img {
+  max-height: 500px;
+  width: auto;
+  max-width: 100%;
+}
+
+.movie__selected--description {
+  width: 60%;
+  padding: 16px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.book__selected--top {
+  padding: 0 24px;
+  margin-bottom: 8px;
+  font-size: 32px;
+  color: #242424;
+  display: flex;
+  align-items: center;
+}
+
+.book__selected--link {
+  color: #242424;
+}
+
+.fa-arrow-left {
+  font-size: 30px;
+}
+
+.book__selected--title--top {
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+.book__summary {
+  margin-bottom: 16px;
+}
+
+.book__selected--title {
+  margin-bottom: 8px
+}
+
+.book__summary--title {
+  margin-bottom: 8px;
+}
+
+.book__summary--para {
+  margin-bottom: 16px;
+}
+
+.book__price {
+  font-size: 16px;
+  margin: 8px 0 24px 0;
+}
+
+.link__breadcrumbs {
+  color: #bfbfbf;
+  margin-bottom: 16px;
+}
