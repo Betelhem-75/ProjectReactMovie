@@ -29,12 +29,15 @@ const Movies = () => {
     }
 
     const sortedMovies = [...movies].sort((a, b) => {
-       const yearA = parseInt(a.Year);
-       const yearB = parseInt(b.Year);
-
-     return sortOrder === 'NEW' ? yearB - yearA : yearA - yearB;
-     
-    });
+        const yearA = parseInt(a.Year);
+        const yearB = parseInt(b.Year);
+      if (sortOrder === "NEW") {
+        return yearB - yearA;
+       } else if (sortOrder === "OLD") {
+      return yearA - yearB;
+      }
+      return 0;
+   });
 
     useEffect(() =>{
     
