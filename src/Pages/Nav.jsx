@@ -2,6 +2,7 @@ import React, { useState} from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navigation from "../Pages/Navigation";
+import oops from "../asset/oops.jpg"
 
 const Nav = () => {
     const { Title } = useParams();
@@ -11,8 +12,13 @@ const Nav = () => {
     const onSearch = () => {
        if (searchTitle !== '') {
         navigate(`${searchTitle}`);
-         
-     
+     } else if( searchTitle !== '[a-ZA-Z0-9]' ) {
+        return (
+           <div className="container">
+              <Navigation />
+              <imag src={oops} alt="" />
+           </div> 
+        )
      }
     }  
 
