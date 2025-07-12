@@ -15,7 +15,7 @@ const Movies = () => {
     const [searchTitle, setSearchTitle] =useState(Title);
     const [movies, setMovies] =useState([]);
     const  title = useQuery()
-    const [sortOrder, setSortOrder] = useState('NEW');
+    const [sortOrder, setSortOrder] = useState([]);
     
     function onSearch(){
         fetchMovies(searchTitle);
@@ -24,6 +24,7 @@ const Movies = () => {
     async function fetchMovies(Title) {
         const { data } =await axios.get(`https://omdbapi.com/?s=${Title}&apikey=1a73e81b`);
         setMovies(data.Search);
+        setSortOrder(data.Search)
         setLoading(false);
     }
 
